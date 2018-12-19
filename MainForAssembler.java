@@ -94,7 +94,7 @@ public class MainForAssembler {
 		
 		ChangePasswordService changePwdSvc = 
 				ctx.getBean("changePwdSvc", ChangePasswordService.class);
-		
+		//adsflkjasdlfkjasldfjdklj
 		try {
 			changePwdSvc.changePassword(arg[1], arg[2], arg[2]);
 			System.out.println("암호를 변경했습니다. \n");
