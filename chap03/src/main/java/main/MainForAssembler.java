@@ -23,7 +23,15 @@ public class MainForAssembler {
 
 	public static void main(String[] args) throws IOException {
 		
-		ctx = new GenericXmlApplicationContext("classpath:appCtx.xml");
+		
+		String[] conf = {"classpath:conf1.xml", "classpath:conf2.xml"};
+		//두개이상의 설정 파일을 사용할 경우, 이렇게 배열을 사용하면 편리함
+		
+		ctx = new GenericXmlApplicationContext(conf);
+
+		
+		//물론 이런식으로 배열을 안하고 하나하나 입력해줘도 됨.  
+		//ctx = new GenericXmlApplicationContext("classpath:conf1.xml", "classpath:conf2.xml");
 		
 
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
