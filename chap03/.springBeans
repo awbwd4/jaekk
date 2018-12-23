@@ -11,6 +11,7 @@
 		<config>src/main/resources/appCtx.xml</config>
 		<config>src/main/resources/conf1.xml</config>
 		<config>src/main/resources/conf2.xml</config>
+		<config>src/main/resources/configImport.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

@@ -24,8 +24,14 @@ public class MainForAssembler {
 	public static void main(String[] args) throws IOException {
 		
 		
-		String[] conf = {"classpath:conf1.xml", "classpath:conf2.xml"};
+		//String[] conf = {"classpath:conf1.xml", "classpath:conf2.xml"};
 		//두개이상의 설정 파일을 사용할 경우, 이렇게 배열을 사용하면 편리함
+		
+		//import태그를 통한 두개 이상의 설정파일 사용.
+		//이 경우, xml 설정파일이 추가되더라도 자바 코드를 변경할 필요 없이
+		//import 태그를 추가해주면 된다.
+		String conf = "classpath:configImport.xml";
+		
 		
 		ctx = new GenericXmlApplicationContext(conf);
 
