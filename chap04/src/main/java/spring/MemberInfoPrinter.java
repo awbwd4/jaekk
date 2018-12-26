@@ -1,6 +1,7 @@
 package spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class MemberInfoPrinter {
 
@@ -15,6 +16,8 @@ public class MemberInfoPrinter {
 	}
 	
 	@Autowired
+	@Qualifier("sysout") //주입될 객체인 memberPrinter의 빈 객체가 appCtx에 두개가 존재함
+	//따라서 qualifier값을 "sysout"으로 갖는 빈객체를 주입하도록 따로 설정해줌.
 	public void setMemberPrinter(MemberPrinter memberPrinter) {
 		this.memberPrinter = memberPrinter;
 	}
