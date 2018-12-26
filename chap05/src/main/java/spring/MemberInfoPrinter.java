@@ -8,6 +8,7 @@ public class MemberInfoPrinter {
 	
 	
 	public void setMemberDao(MemberDao memberDao) {
+		System.out.println("member register service 주입 : "+memberDao);
 		this.memDao = memberDao;
 	}
 	public void setMemberPrinter(MemberPrinter memberPrinter) {
