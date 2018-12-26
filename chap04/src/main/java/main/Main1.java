@@ -16,7 +16,7 @@ public class Main1 {
 		// MemberPrinter 타입의 두 빈 객체 중 어떤 객체를 주입해야 할지 모르기 때문에 익셉션이 발생한다.
 		
 		
-		ApplicationContext ctx = new GenericXmlApplicationContext("classpath:appCtx2.xml");
+		ApplicationContext ctx = new GenericXmlApplicationContext("classpath:appCtx4.xml");
 		MemberRegisterService regSvc = ctx.getBean("memberRegSvc", MemberRegisterService.class);
 		MemberInfoPrinter infoPrinter = ctx.getBean("infoPrinter", MemberInfoPrinter.class);
 		

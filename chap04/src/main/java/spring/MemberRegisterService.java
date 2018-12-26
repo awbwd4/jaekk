@@ -10,7 +10,7 @@ public class MemberRegisterService {
 	
 	
 	
-	@Autowired
+	@Autowired(required=false)
 	public MemberRegisterService(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}//생성자를 통해 의존 객체인 dao를 전달함. 직접 객체 생성ㄴㄴ
