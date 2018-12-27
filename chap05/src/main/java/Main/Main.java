@@ -8,6 +8,7 @@ import config.ConfigPart2;
 import config.ConfigPartMain;
 import config.JavaConfig;
 import config.JavaConfig2;
+import config.JavaMainConf;
 import spring.MemberInfoPrinter;
 import spring.MemberRegisterService;
 import spring.RegisterRequest;
@@ -22,8 +23,12 @@ public class Main {
 	
 		/*ApplicationContext ctx = 
 				new AnnotationConfigApplicationContext(ConfigPart1.class, ConfigPart2.class);*/
+		/*ApplicationContext ctx = 
+				new AnnotationConfigApplicationContext(ConfigPartMain.class);*/
+		/*ApplicationContext ctx = 
+				new AnnotationConfigApplicationContext(JavaMainConf.class);*/
 		ApplicationContext ctx = 
-				new AnnotationConfigApplicationContext(ConfigPartMain.class);
+				new AnnotationConfigApplicationContext("classpath:main-config.xml");
 		
 		
 		
