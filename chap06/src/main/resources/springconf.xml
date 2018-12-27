@@ -4,8 +4,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-	<bean id = "client" class="spring.Client">
+	<bean id = "client" class="spring.Client" scope="prototype">
+	<!-- 범위를 프로토타입으로 지정해주면 빈 객체를 구할 때마다 매번 새로운 객체를 생성한다. -->
 		<property name="host" value="서버"/>
+	</bean>
+	
+	<bean id="client2" class = "spring.Client2"
+	init-method="connect" destroy-method="close">
+		<property name="host" value="서버2"></property>	
 	</bean>
 
 
