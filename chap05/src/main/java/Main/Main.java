@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import config.ConfigPart1;
 import config.ConfigPart2;
+import config.ConfigPartMain;
 import config.JavaConfig;
 import config.JavaConfig2;
 import spring.MemberInfoPrinter;
@@ -19,8 +20,10 @@ public class Main {
 		/*ApplicationContext ctx = 
 				new AnnotationConfigApplicationContext(JavaConfig2.class);*/
 	
+		/*ApplicationContext ctx = 
+				new AnnotationConfigApplicationContext(ConfigPart1.class, ConfigPart2.class);*/
 		ApplicationContext ctx = 
-				new AnnotationConfigApplicationContext(ConfigPart1.class, ConfigPart2.class);
+				new AnnotationConfigApplicationContext(ConfigPartMain.class);
 		
 		
 		
